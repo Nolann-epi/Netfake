@@ -3,7 +3,7 @@ interface InputAuthProps {
 }
 const InputAuth = (props: InputAuthProps) => {
   return (
-    <input placeholder={props.placeholder} className="px-4 py-4 rounded-md bg-[#333]"/>
+    <input placeholder={props.placeholder} className="px-4 py-4 bg-[#333] rounded-md"/>
   )
 }
 
