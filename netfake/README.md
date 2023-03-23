@@ -45,7 +45,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 * npx tailwindcss init -p
 * delete _document.tsx
 * index.tsx =>
-```export default function Home() {
+```
+export default function Home() {
   return (
     <>
     <h1>Netfake</h1>
@@ -55,7 +56,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ```
 * delete styles/Home.css
 * tailwind.config.js => 
-```/** @type {import('tailwindcss').Config} */
+```
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     "./app/**/*.{js,jsx,ts,tsx}",
@@ -69,7 +71,8 @@ module.exports = {
 }
 ```
 * globals.css => 
-```@tailwind base;
+```
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 ```
