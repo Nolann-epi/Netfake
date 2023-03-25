@@ -38,7 +38,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 
-## Steps
+## NextJS / Typescript / Tailwind
 
 * run npm-next-app --typescript
 * npm install -D tailwindcss postcss autoprefixer
@@ -77,6 +77,8 @@ module.exports = {
 @tailwind utilities;
 ```
 
+## Prisma / MongoDB
+
 npm install -D prisma
 npx prisma init (add your db provider here MongoDB)
 npm install @prisma/client
@@ -105,4 +107,12 @@ declare global {
 
 Write your schema in prisma/schema.prisma
 
-Then npx prisma db push
+Then 
+
+npx prisma db push
+
+
+## Authentication
+
+npm install bcrypt @types/bcrypt (credential authentication)
+npm install next-auth
