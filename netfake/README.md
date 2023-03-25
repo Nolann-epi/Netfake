@@ -76,3 +76,33 @@ module.exports = {
 @tailwind components;
 @tailwind utilities;
 ```
+
+npm install -D prisma
+npx prisma init (add your db provider here MongoDB)
+npm install @prisma/client
+
+lib/prismadb.tsx =>
+```
+import { PrismaClient } from '@prisma/client'
+
+const client = global.prismadb || new PrismaClient()
+
+if (process.env.NODE_ENV === 'production') global.prismadb = client
+
+export default client
+```
+
+global.d.tsx => 
+```
+import { PrismaClient } from "@prisma/client";
+
+declare global {
+  namespace globalThis {
+    var prismadb: PrismaClient;
+  }
+}
+```
+
+Write your schema in prisma/schema.prisma
+
+Then npx prisma db push
