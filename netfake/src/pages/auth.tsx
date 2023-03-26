@@ -1,14 +1,17 @@
 import InputAuth from "@/components/InputAuth";
 import { useCallback, useState } from "react";
+import { useLogin } from "./api/auth/useLogin";
+import { useRegister } from "./api/auth/useRegister";
 
 const Auth = () => {
   const [username, setUsername] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
-
   const [authMethod, setAuthMethod] = useState<"login" | "register">("login");
+  const login = useLogin(email, password);
+  const register = useRegister(username, email, password);
 
-  const toggleAuthMethod = useCallback(() => {
+  const toggleAuthMethod = useCallback(async () => {
     setAuthMethod((currentMethod) =>
       currentMethod === "login" ? "register" : "login"
     );
@@ -46,12 +49,17 @@ const Auth = () => {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
-            <button className="w-full py-4 px-4 mt-8  bg-red-600 text-white font-semibold rounded-md">
-              {authMethod === "login" ? "Sign In" : "Register"}
+            <button
+              onClick={authMethod === "login" ? login : register}
+              className="w-full py-4 px-4 mt-8  bg-red-600 text-white font-semibold rounded-md"
+            >
+              {authMethod === "login" ? "Login" : "Create my account"}
             </button>
             <div className="flex justify-center pt-6 md:pt-12">
               <p className="text-white md:text-base text-sm">
-                {authMethod === "login" ? "New to Netfake?" : "Already have an account?"}
+                {authMethod === "login"
+                  ? "New to Netfake?"
+                  : "Already have an account?"}
                 <span
                   className="pl-2 md:pl-4 text-sm md:text-base hover:text-red-600 font-semibold cursor-pointer"
                   onClick={() => toggleAuthMethod()}

@@ -116,3 +116,8 @@ npx prisma db push
 
 npm install bcrypt @types/bcrypt (credential authentication)
 npm install next-auth
+
+
+## API
+
+npm install axios

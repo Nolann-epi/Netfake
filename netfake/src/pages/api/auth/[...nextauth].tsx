@@ -23,7 +23,7 @@ export default NextAuth({
                     },
                 });
 
-                if (!user || user.hashedPassword !== credentials.password) {
+                if (!user || !user.hashedPassword) {
                     throw new Error("Email is incorrect");
                 }
 
