@@ -2,6 +2,8 @@ import InputAuth from "@/components/InputAuth";
 import { useCallback, useState } from "react";
 import { useLogin } from "./api/auth/useLogin";
 import { useRegister } from "./api/auth/useRegister";
+import { FcGoogle } from "react-icons/fc";
+import { FaGithub } from "react-icons/fa";
 
 const Auth = () => {
   const [username, setUsername] = useState<string>("");
@@ -20,12 +22,12 @@ const Auth = () => {
   return (
     <div className="relative h-full w-full bg-[url('/images/hero.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
       <div className="w-full h-full bg-black  bg-opacity-50 ">
-        <nav className="pt-16 md:px-12 md:py-5 ">
+        <nav className="pt-8 md:px-12 md:py-5 ">
           <h1 className="h-12 text-center md:text-start text-5xl md:text-4xl text-red-600 font-extrabold ">
             NETFAKE
           </h1>
         </nav>
-        <div className="flex justify-center pt-20">
+        <div className="flex justify-center md:pt-20 pt-8">
           <div className="w-4/5 md:w-2/5 self-center max-w-md  px-8 md:px-16 py-8 md:pt-16   bg-black bg-opacity-70 rounded-md">
             <h2 className=" pb-8 md:pb-10  text-2xl md:text-4xl text-white font-semibold">
               {authMethod === "login" ? "Sign In" : "Register"}
@@ -55,6 +57,15 @@ const Auth = () => {
             >
               {authMethod === "login" ? "Login" : "Create my account"}
             </button>
+            <div className="flex flex-row items-center justify-center space-x-8 pt-10">
+              <div className="flex w-10 h-10 bg-white rounded-full items-center justify-center cursor-pointer hover:opacity-80 transition">
+                <FcGoogle className="text-2xl"/>
+              </div>
+              <div className="flex w-10 h-10 bg-white rounded-full items-center justify-center cursor-pointer hover:opacity-80 transition">
+                <FaGithub className="text-2xl"/>
+              </div>
+            </div>
+
             <div className="flex justify-center pt-6 md:pt-12">
               <p className="text-white md:text-base text-sm">
                 {authMethod === "login"
