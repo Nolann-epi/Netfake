@@ -111,13 +111,32 @@ Then
 
 npx prisma db push
 
+```
+Error: MongoDB error
+Server selection timeout: No available servers. Topology: { Type: ReplicaSetNoPrimary, Servers: [ { Address: ac-uocf4yo-shard-00-00.eefdlfl.mongodb.net:27017, Type: Unknown, Error: unexpected end of file }, { Address: ac-uocf4yo-shard-00-01.eefdlfl.mongodb.net:27017, Type: Unknown, Error: unexpected end of file }, { Address: ac-uocf4yo-shard-00-02.eefdlfl.mongodb.net:27017, Type: Unknown, Error: unexpected end of file }, ] }
+   0: migration_core::commands::schema_push::Calculate `from`
+             at migration-engine/core/src/commands/schema_push.rs:46
+   1: migration_core::state::SchemaPush
+             at migration-engine/core/src/state.rs:433
+
+```
+(hi, to fix this, go into MognoDB Atlas => Network Access => Add IP address => 0.0.0.0/0 )
 
 ## Authentication
 
 npm install bcrypt @types/bcrypt (credential authentication)
 npm install next-auth
+npm install @next-auth/prisma-adapter (Google/Github authentication)
+
+Github -> Settings -> Developer Settings -> OauthApp
+https://console.cloud.google.com/welcome?project=netfake-382807 -> Create A Project
+Consent Oauth
+Credentials -> Oauth ClientID -> URI = http://localhost:3000/api/auth/callback/google
+
 
 
 ## API
 
 npm install axios
+
+

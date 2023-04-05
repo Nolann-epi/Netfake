@@ -4,6 +4,7 @@ import { useLogin } from "./api/auth/useLogin";
 import { useRegister } from "./api/auth/useRegister";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
+import { signIn } from "next-auth/react";
 
 const Auth = () => {
   const [username, setUsername] = useState<string>("");
@@ -58,11 +59,17 @@ const Auth = () => {
               {authMethod === "login" ? "Login" : "Create my account"}
             </button>
             <div className="flex flex-row items-center justify-center space-x-8 pt-10">
-              <div className="flex w-10 h-10 bg-white rounded-full items-center justify-center cursor-pointer hover:opacity-80 transition">
-                <FcGoogle className="text-2xl"/>
+              <div
+                onClick={() => signIn("google", { callbackUrl: "/" })}
+                className="flex w-10 h-10 bg-white rounded-full items-center justify-center cursor-pointer hover:opacity-80 transition"
+              >
+                <FcGoogle className="text-2xl" />
               </div>
-              <div className="flex w-10 h-10 bg-white rounded-full items-center justify-center cursor-pointer hover:opacity-80 transition">
-                <FaGithub className="text-2xl"/>
+              <div
+                className="flex w-10 h-10 bg-white rounded-full items-center justify-center cursor-pointer hover:opacity-80 transition"
+                onClick={() => signIn("github", { callbackUrl: "/" })}
+              >
+                <FaGithub className="text-2xl" />
               </div>
             </div>
 
