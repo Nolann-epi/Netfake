@@ -140,3 +140,4 @@ Credentials -> Oauth ClientID -> URI = http://localhost:3000/api/auth/callback/g
 npm install axios
 
 
+npm install swr
