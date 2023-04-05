@@ -1,7 +1,7 @@
 import InputAuth from "@/components/InputAuth";
 import { useCallback, useState } from "react";
-import { useLogin } from "./api/auth/useLogin";
-import { useRegister } from "./api/auth/useRegister";
+import { useLogin } from "../hooks/useLogin";
+import { useRegister } from "../hooks/useRegister";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 import { signIn } from "next-auth/react";
@@ -60,14 +60,14 @@ const Auth = () => {
             </button>
             <div className="flex flex-row items-center justify-center space-x-8 pt-10">
               <div
-                onClick={() => signIn("google", { callbackUrl: "/" })}
+                onClick={() => signIn("google", { callbackUrl: "/profiles" })}
                 className="flex w-10 h-10 bg-white rounded-full items-center justify-center cursor-pointer hover:opacity-80 transition"
               >
                 <FcGoogle className="text-2xl" />
               </div>
               <div
                 className="flex w-10 h-10 bg-white rounded-full items-center justify-center cursor-pointer hover:opacity-80 transition"
-                onClick={() => signIn("github", { callbackUrl: "/" })}
+                onClick={() => signIn("github", { callbackUrl: "/profiles" })}
               >
                 <FaGithub className="text-2xl" />
               </div>
