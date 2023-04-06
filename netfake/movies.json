@@ -1,0 +1,191 @@
+{
+    "_id": {
+        "$oid": "642e7ec4bc279d274b3e1e1e"
+    },
+    "title": "Spiderman",
+    "description": "Average teenager Peter Parker is transformed into an extraordinary super hero after he is accidentally bitten by a radioactive spider. When his beloved uncle is savagely murdered during a robbery, young Peter vows to use his powers to avenge his death.",
+    "videoUrl": "t06RUxPbp_c",
+    "thumbnailUrl": "https://media.gettyimages.com/id/159831398/photo/spiderman-in-a-scene-from-the-film-spiderman-2002.jpg?s=612x612&w=gi&k=20&c=Z7JUknbuae-tCUW4CxP-JPoj7daShwRr-y1whZmEsRc=",
+    "genre": "Action",
+    "duration": "1h36",
+    "youtube": true,
+    "type": "film",
+    "createdIn": "2002"
+}
+{
+    "_id": {
+        "$oid": "642e7ec4bc279d274b3e1e11"
+    },
+    "title": "Star Wars Episode I: The Phantom Menace",
+    "description": "The first installment in the Star Wars franchise follows young Anakin Skywalker's journey as he becomes acquainted with the Jedi Order and encounters the evil Sith Lord Darth Maul.",
+    "videoUrl": "bD7bpG-zDJQ",
+    "thumbnailUrl": "https://www.hollywoodreporter.com/wp-content/uploads/2019/10/starep1.png?w=681&h=383&crop=1",
+    "genre": "Science Fiction",
+    "duration": "2h16",
+    "youtube": true,
+    "type": "film",
+    "createdIn": "1999"
+}
+{
+    "_id": {
+        "$oid": "642e7ec4bc279d274b3e1e12"
+    },
+    "title": "Indiana Jones",
+    "description": "Indiana Jones, an archaeologist, searches for ancient artifacts and races to find the Ark of the Covenant in the first film, Raiders of the Lost Ark.",
+    "videoUrl": "0xQSIdSRlAk",
+    "thumbnailUrl": "https://hips.hearstapps.com/hmg-prod/images/indiana-jones-movies-in-order-1981-raiders-1-1637254187.jpg?crop=1.00xw:0.994xh;0,0&resize=1200:*",
+    "genre": "Action",
+    "duration": "1h55",
+    "youtube": true,
+    "type": "film",
+    "createdIn": "1981"
+}
+{
+    "_id": {
+        "$oid": "642e7ec4bc279d274b3e1e13"
+    },
+    "title": "The Lord of the Rings: The Fellowship of the Ring",
+    "description": "The films follow hobbit Frodo Baggins as he embarks on a perilous journey to destroy the One Ring and defeat the dark lord Sauron.",
+    "videoUrl": "V75dMMIW2B4",
+    "thumbnailUrl": "https://d1nslcd7m2225b.cloudfront.net/Pictures/1024x536/4/7/7/1252477_fellowship.jpg",
+    "genre": "Fantasy",
+    "duration": "2h58",
+    "youtube": true,
+    "type": "film",
+    "createdIn": "2001"
+}
+{
+    "_id": {
+        "$oid": "642e7ec4bc279d274b3e1e14"
+    },
+    "title": "Fight Club",
+    "description": "Fight Club is a provocative and thought-provoking film about a disillusioned office worker who starts a secret underground fight club as a way to escape the monotony of his life.",
+    "videoUrl": "qtRKdVHc-cE",
+    "thumbnailUrl": "https://m.media-amazon.com/images/M/MV5BMTM4MjA2MzI0OF5BMl5BanBnXkFtZTcwNjU3ODMzMw@@._V1_.jpg",
+    "genre": "Thriller",
+    "duration": "2h19",
+    "youtube": true,
+    "type": "film",
+    "createdIn": "1999"
+}
+{
+    "_id": {
+        "$oid": "642e7ec4bc279d274b3e1e15"
+    },
+    "title": "Pulp Fiction",
+    "description": "",
+    "videoUrl": "",
+    "thumbnailUrl": "",
+    "genre": "",
+    "duration": ""
+}
+{
+    "_id": {
+        "$oid": "642e7ec4bc279d274b3e1e16"
+    },
+    "title": "Interstellar",
+    "description": "",
+    "videoUrl": "",
+    "thumbnailUrl": "",
+    "genre": "",
+    "duration": ""
+}
+{
+    "_id": {
+        "$oid": "642e7ec4bc279d274b3e1e17"
+    },
+    "title": "Blade Runner",
+    "description": "",
+    "videoUrl": "",
+    "thumbnailUrl": "",
+    "genre": "",
+    "duration": ""
+}
+{
+    "_id": {
+        "$oid": "642e7ec4bc279d274b3e1e18"
+    },
+    "title": "The GodFather",
+    "description": "",
+    "videoUrl": "",
+    "thumbnailUrl": "",
+    "genre": "",
+    "duration": ""
+}
+{
+    "_id": {
+        "$oid": "642e7ec4bc279d274b3e1e19"
+    },
+    "title": "Forrest Gump",
+    "description": "",
+    "videoUrl": "",
+    "thumbnailUrl": "",
+    "genre": "",
+    "duration": ""
+}
+{
+    "_id": {
+        "$oid": "642e7ec4bc279d274b3e1e20"
+    },
+    "title": "Inception",
+    "description": "",
+    "videoUrl": "",
+    "thumbnailUrl": "",
+    "genre": "",
+    "duration": ""
+}
+{
+    "_id": {
+        "$oid": "642e7ec4bc279d274b3e1e21"
+    },
+    "title": "Apocalypse Now",
+    "description": "",
+    "videoUrl": "",
+    "thumbnailUrl": "",
+    "genre": "",
+    "duration": ""
+}
+{
+    "_id": {
+        "$oid": "642e7ec4bc279d274b3e1e22"
+    },
+    "title": "Matrix",
+    "description": "",
+    "videoUrl": "",
+    "thumbnailUrl": "",
+    "genre": "",
+    "duration": ""
+}
+{
+    "_id": {
+        "$oid": "642e7ec4bc279d274b3e1e23"
+    },
+    "title": "Harry Potter 1",
+    "description": "",
+    "videoUrl": "",
+    "thumbnailUrl": "",
+    "genre": "",
+    "duration": ""
+}
+{
+    "_id": {
+        "$oid": "642e7ec4bc279d274b3e1e24"
+    },
+    "title": "Jurassic Park",
+    "description": "",
+    "videoUrl": "",
+    "thumbnailUrl": "",
+    "genre": "",
+    "duration": ""
+}
+{
+    "_id": {
+        "$oid": "642e7ec4bc279d274b3e1e25"
+    },
+    "title": "Shutter Island",
+    "description": "",
+    "videoUrl": "",
+    "thumbnailUrl": "",
+    "genre": "",
+    "duration": ""
+}
