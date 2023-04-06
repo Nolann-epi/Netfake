@@ -43,8 +43,8 @@ const Navbar = () => {
   return (
     <nav className="w-full fixed z-40">
       <div
-        className={`px-4 md:px-16 py-5 flex flex-row items-center transition duration-500 ${
-          showBackground ? "bg-zinc-900/90" : ""
+        className={`px-4 md:px-16 py-5 flex flex-row items-center transition duration-[0.8s] ${
+          showBackground ? "bg-zinc-900/80" : "bg-zinc-900"
         }`}
       >
         <h1 className="text-red-600 font-extrabold text-2xl">NETFAKE</h1>
