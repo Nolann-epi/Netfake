@@ -1,18 +1,44 @@
 Netfake
 
+
+# Description
 Netfake is a Netflix clone made with Next.JS. Once you are connected, you can watch trailers or add trailers to your watchlist and watch them later.
-Functionalities
+
+# How to use
+
+Go to https:vercel/netfake.com
+
+You can create an account or use the guest user :
+
+Email : guest@user.com
+Password : guest
+# Functionalities
 
 Netfake offers the following functionalities:
 
-    Authentication with credential, Google or Github account
-    Watch trailers
-    Add trailers to your watchlist and watch them later
-    Access trailers via genre
+Authentication with credential, Google or Github account
+Watch trailers
+Add trailers to your watchlist and watch them later
+View list of movies by genre
+
+# Technologies used
+
+The technologies used to build Netfake are:
+
+    Next.JS
+    TailwindCSS
+    MongoDB
+    Prisma
+    bcrypt
+    Next-Auth
+    Axios
+    SWR
+    Zustand
+    Lodash
 
 
 
-## Steps
+## Typescript & Tailwind
 
 To set up a NextJS repository, follow the steps below:
 
@@ -54,16 +80,10 @@ module.exports = {
 @tailwind utilities;
 ```
 
-## Database
-
-npm install -D prisma
-npx prisma init
-Modify schema.prisma to mongoDB
-npm install @prisma/client
-
-## Prisma / MongoDB
+## Prisma & MongoDB
 
   * Run npm install -D prisma
+  * Run npm install @prisma/client
   * Run npx prisma init and select MongoDB as the database provider
   * Modify schema.prisma to mongoDB
   * Modify lib/prismadb.tsx to:
@@ -109,3 +129,6 @@ Server selection timeout: No available servers. Topology: { Type: ReplicaSetNoPr
 ```
 * To fix this, go into MognoDB Atlas => Network Access => Add IP address
 
+## Credits
+
+Netfake was inspired by Code with Antonio and developed by Nolann Holvoet. Visit my GitHub account for more information.
