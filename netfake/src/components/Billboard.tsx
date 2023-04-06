@@ -4,6 +4,7 @@ import YouTube from "react-youtube";
 
 import useBillboard from "@/hooks/useBillboard";
 import PlayButton from "./playButton";
+import useInfoModal from "@/hooks/useInfoModal";
 
 const opts = {
   height: "100%",
@@ -16,7 +17,11 @@ const opts = {
 
 const Billboard: React.FC = () => {
   const { data } = useBillboard();
-  console.log(data);
+  const { openModal } = useInfoModal();
+
+  const handleOpenModal = useCallback(() => {
+    openModal(data?.id);
+  }, [data?.id, openModal]);
 
   return (
     <div className="relative h-[50.25vw] w-full md:px-10 pt-12">
@@ -46,6 +51,7 @@ const Billboard: React.FC = () => {
         <div className="md:flex flex-row items-center mt-3 md:mt-4 gap-3 hidden">
           <PlayButton movieId={data?.id} />
           <button
+            onClick={handleOpenModal}
             className="
             bg-white
             text-white
