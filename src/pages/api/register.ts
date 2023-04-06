@@ -31,7 +31,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 emailVerified: new Date(),
             },
         });
-        console.log("User created");
         res.status(201).json({ message: 'User created', user: user });
 
     } catch (error) {
