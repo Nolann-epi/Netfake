@@ -1,8 +1,19 @@
-Netfake
+# Netfake
 
 
-# Description
+## Description
 Netfake is a Netflix clone made with Next.JS. Once you are connected, you can watch trailers or add trailers to your watchlist and watch them later.
+
+## Screenshot Sign In
+![netfake_1](https://user-images.githubusercontent.com/62303354/230506283-ef457a88-db13-41c9-882e-84b8a4df3485.png)
+
+## Screenshot  Landing Page 
+
+![netfake_2](https://user-images.githubusercontent.com/62303354/230506339-db5ef29c-9bfe-4947-8e8e-c02c87c6a947.png)
+
+## Screenshot Example of List
+
+![netfake_3](https://user-images.githubusercontent.com/62303354/230506379-91888153-a6b9-4466-af79-3868808a0a05.png)
 
 # How to use
 
