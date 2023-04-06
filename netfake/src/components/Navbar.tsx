@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import MobileMenu from "./MobileMenu";
 import NavbarItem from "./NavbarItem";
 import { BsBell, BsChevronDown, BsSearch } from "react-icons/bs";
@@ -9,7 +9,7 @@ const TOP_OFFSET = 66;
 
 const Navbar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
-  const [showAccountMenu, setshowAccountMenu] = useState(false);
+  const [showAccountMenu, setShowAccountMenu] = useState(false);
   const [showBackground, setShowBackground] = useState(false);
 
   useEffect(() => {
@@ -25,6 +25,20 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const toggleMobileMenu = useCallback(() => {
+    if (showAccountMenu) {
+      setShowAccountMenu(false);
+    }
+    setShowMobileMenu((current) => !current);
+  }, [showAccountMenu]);
+
+  const toggleAccountMenu = useCallback(() => {
+    if (showMobileMenu) {
+      setShowMobileMenu(false);
+    }
+    setShowAccountMenu((current) => !current);
+  }, [showMobileMenu]);
 
   return (
     <nav className="w-full fixed z-40">
@@ -44,7 +58,7 @@ const Navbar = () => {
         </div>
         <div
           className="lg:hidden flex flex-row items-center gap-2 ml-8 cursor-pointer relative"
-          onClick={() => setShowMobileMenu(!showMobileMenu)}
+          onClick={toggleMobileMenu}
         >
           <p className="text-white text-sm">Browse</p>
           <BsChevronDown
@@ -54,7 +68,7 @@ const Navbar = () => {
           />
           <MobileMenu visible={showMobileMenu} />
         </div>
-        <div className="flex flex-row ml-auto gap-7 items-center">
+        <div className="flex flex-row ml-auto md:gap-7 gap-3 items-center">
           <div className="text-gray-200 hover:text-white cursor-pointer transition">
             <BsSearch className="md:text-xl" />
           </div>
@@ -63,7 +77,7 @@ const Navbar = () => {
           </div>
           <div
             className="flex flex-row items-center gap-2 cursor-pointer relative"
-            onClick={() => setshowAccountMenu(!showAccountMenu)}
+            onClick={toggleAccountMenu}
           >
             <div className="w-6 h-6 lg:w-10 lg:h-10 rounded-md overflow-hidden">
               <Image
