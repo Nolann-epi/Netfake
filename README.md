@@ -17,7 +17,7 @@ Netfake is a Netflix clone made with Next.JS. Once you are connected, you can wa
 
 # How to use
 
-Go to https:vercel/netfake.com
+Go to https://netfake-blue.vercel.app/
 
 You can create an account or use the guest user :
 
