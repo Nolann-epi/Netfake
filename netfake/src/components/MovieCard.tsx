@@ -44,19 +44,23 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
               />
             </div>
           </div>
-          <p className="text-green-400 font-semibold mt-4">
-            From <span className="text-white font-bold">{data?.createdIn}</span>
-          </p>
-          <div className="flex flex-row mt-4 gap-2 items-center">
-            <p className="text-white font-semibold text-[10px] lg:text-sm">
+          <div className="flex flex-row mt-4 justify-start ">
+            <p className="text-white font-semibold text-lg lg:text-base">
+              {" "}
+              {data?.title}{" "}
+            </p>
+          </div>
+          <div className="flex flex-row mt-4 justify-around ">
+            <p className="text-green-400 font-semibold">
+              From{" "}
+              <span className="text-white font-bold">{data?.createdIn}</span>
+            </p>
+            <p className="text-white font-semibold text-lg lg:text-base">
               {" "}
               {data?.duration}{" "}
             </p>
-          </div>
-          <div className="flex flex-row mt-4 gap-2 items-center">
-            <p className="text-white font-semibold text-[10px] lg:text-sm">
-              {" "}
-              {data?.genre}{" "}
+            <p>
+              <span className="text-white font-bold">{data?.genre}</span>
             </p>
           </div>
         </div>

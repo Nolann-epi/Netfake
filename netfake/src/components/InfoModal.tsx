@@ -40,33 +40,49 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
     return null;
   }
   return (
-    <div className="z-50 transition duration-300 bg-black/80 flex justify-center items-center overflow-x-hidden overflow-y-auto fixed inset-0">
-      <div className="relative w-auto mx-auto max-w-3xl rounded-md  ">
+    <div className="z-50 transition duration-300 bg-black/80 flex justify-center items-center overflow-x-hidden  fixed inset-0">
+      <div className="relative w-auto h-[80%] mx-auto max-w-3xl rounded-md  ">
         <div
           className={`${
             isVisible ? "scale-100" : "scale-0"
           } transform duration-300 relative flex-auto bg-zinc-900 drop-shadow-md`}
         >
-          <div className="relative h-[60vh] w-[40vw] p-10">
-            <div className="w-full h-full ">
+          <div className="relative w-[40vw] p-10">
+            <div className="w-full h-[35vh] ">
               <YouTube
-                className="w-full object-cover h-2/3 focus-visible:outline-none"
+                className="w-full object-cover h-full focus-visible:outline-none"
                 videoId={data?.videoUrl}
                 opts={opts}
               />
-              <div
-                className="cursor-pointer absolute top-2 right-2 rounded-full h-6 w-6 bg-black/75 flex items-center justify-center text-white text-2xl"
-                onClick={handleClose}
-              >
-                <AiOutlineClose className="text-white" size={20} />
+            </div>
+            <div
+              className="cursor-pointer absolute top-2 right-2 rounded-full h-6 w-6 bg-black/75 flex items-center justify-center text-white text-2xl"
+              onClick={handleClose}
+            >
+              <AiOutlineClose className="text-white" size={20} />
+            </div>
+            <div className="flex flex-col items-start">
+              <div className="flex flex-row items-center gap-4 pt-8">
+                <PlayButton movieId={data?.id} />
+                <FavoriteButton movieId={data?.id} />
               </div>
-              <div className="flex flex-col items-start">
-                <div className="flex flex-row items-center gap-4 pt-4">
-                  <PlayButton movieId={data?.id} />
-                  <FavoriteButton movieId={data?.id} />
-                </div>
-                <div>
-                  <p className="text-white text-2xl pt-2">{data?.title}</p>
+              <div>
+                <p className="text-white text-3xl pt-6">{data?.title}</p>
+                <p className="text-xl text-white pt-4">{data?.description}</p>
+                <div className="flex flex-row mt-4 justify-around ">
+                  <p className="text-green-400 font-semibold">
+                    From{" "}
+                    <span className="text-white font-bold">
+                      {data?.createdIn}
+                    </span>
+                  </p>
+                  <p className="text-white font-semibold text-lg lg:text-base">
+                    {" "}
+                    {data?.duration}{" "}
+                  </p>
+                  <p>
+                    <span className="text-white font-bold">{data?.genre}</span>
+                  </p>
                 </div>
               </div>
             </div>
