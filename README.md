@@ -21,16 +21,18 @@ Go to https://netfake-blue.vercel.app/
 
 You can create an account or use the guest user :
 
-Email : guest@user.com
-Password : guest
+* Email : guest@user.com
+* Password : guest
+
 # Functionalities
 
 Netfake offers the following functionalities:
 
-Authentication with credential, Google or Github account
-Watch trailers
-Add trailers to your watchlist and watch them later
-View list of movies by genre
+ * Create an account via credentials
+ * Authentication with credentials, Google or Github account
+ * Watch trailers of your favorite movies
+ * Add trailers to your watchlist and watch them later
+ * View list of movies by genre
 
 # Technologies used
 
