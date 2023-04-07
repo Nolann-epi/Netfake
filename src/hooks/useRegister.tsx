@@ -8,7 +8,6 @@ export const useRegister = (
   email: string,
   password: string
 ) => {
-  const router = useRouter();
   const login = useLogin(email, password);
 
   const register = useCallback(async () => {
@@ -18,9 +17,11 @@ export const useRegister = (
         email,
         password,
       });
-      login();
-    } catch (error) {
-      console.log(error);
+      return login();
+    } catch (error: any) {
+      if (error.response) {
+        return error.response.data;
+      }
     }
   }, [username, email, password, login]);
 

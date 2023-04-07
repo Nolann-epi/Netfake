@@ -16,7 +16,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             },
         });
         if (existingUser) {
-            res.status(402).json({ message: 'User already exists' });
+            res.status(401).json({ message: 'User already exists' });
             return;
         }
 

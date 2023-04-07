@@ -13,12 +13,37 @@ const Auth = () => {
   const [authMethod, setAuthMethod] = useState<"login" | "register">("login");
   const login = useLogin(email, password);
   const register = useRegister(username, email, password);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const toggleAuthMethod = useCallback(async () => {
+    setErrorMessage("");
     setAuthMethod((currentMethod) =>
       currentMethod === "login" ? "register" : "login"
     );
   }, []);
+
+  const handleLogin = useCallback(async () => {
+    if (!email || !password) {
+      setErrorMessage("Please fill all the fields");
+      return;
+    }
+    let response = await login();
+    if (response?.error) {
+      setErrorMessage(response.error);
+    }
+  }, [login]);
+
+  const handleRegister = useCallback(async () => {
+    if (!username || !email || !password) {
+      setErrorMessage("Please fill all the fields");
+      return;
+    }
+    let response = await register();
+    if (response?.status !== 200) {
+      console.log(response);
+      setErrorMessage(response?.message);
+    }
+  }, [register]);
 
   return (
     <div className="relative h-full w-full bg-[url('/images/hero.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
@@ -52,13 +77,27 @@ const Auth = () => {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
+            <div>
+              {errorMessage && (
+                <p className="text-red-600 text-sm pt-2">{errorMessage}</p>
+              )}
+            </div>
             <button
-              onClick={authMethod === "login" ? login : register}
+              onClick={authMethod === "login" ? handleLogin : handleRegister}
               className="w-full py-4 px-4 mt-8  bg-red-600 text-white font-semibold rounded-md"
             >
               {authMethod === "login" ? "Login" : "Create my account"}
             </button>
-            <div className="flex flex-row items-center justify-center space-x-8 pt-10">
+            <div className="w-full h-10">
+              <p
+                className={`text-center text-white text-sm pt-4 ${
+                  authMethod === "login" ? "" : "hidden"
+                }`}
+              >
+                Guest Account : guest@user.com / guest
+              </p>
+            </div>
+            <div className="flex flex-row items-center justify-center space-x-8 pt-4">
               <div
                 onClick={() => signIn("google", { callbackUrl: "/profiles" })}
                 className="flex w-10 h-10 bg-white rounded-full items-center justify-center cursor-pointer hover:opacity-80 transition"
